@@ -1,157 +1,298 @@
 const catalog = {
   categories: [
     {
-      id: "internet-only",
-      label: "Internet Only",
-      subtitle:
-        "Solusi internetan cepat, stabil, dan tanpa ribet untuk kebutuhan harian rumah atau kosan.",
+      id: "all-packages",
+      label: "Semua Paket",
+      subtitle: "Bandingkan seluruh paket internet dan hiburan dalam satu layar.",
       packages: [
         {
-          id: "io-20mbps",
-          title: "Paket EZnet Telkomsel (20 Mbps)",
-          price: "Rp170.000",
-          priceUnit: "/bulan",
-          promoTag: "PROMO",
-          details: ["Tersedia di kota tertentu", "Biaya Pasang Rp99.000", "Harga sesuai area pasang"],
-          bonus: null,
-          ctaLabel: "Pilih Paket 20 Mbps"
-        },
-        {
-          id: "io-50mbps",
-          title: "Paket Internet Only (50 Mbps)",
+          id: "all-internet-50-75",
+          categoryId: "internet",
+          categoryLabel: "Internet",
+          title: "Internet",
+          speedLabel: "50 → 75 Mbps",
+          speedValue: 75,
           price: "Rp230.000",
           priceUnit: "/bulan",
-          promoTag: "PROMO",
-          details: ["Up to 50 Mbps", "Biaya Pasang Rp99.000", "Ideal untuk 5 perangkat"],
-          bonus: null,
-          ctaLabel: "Pilih Paket 50 Mbps"
+          ctaLabel: "Lihat Paket 50 → 75 Mbps",
+          description: "Paket internet rumah yang stabil"
         },
         {
-          id: "io-75mbps",
-          title: "Paket Internet Only (75 Mbps)",
+          id: "all-internet-75-100",
+          categoryId: "internet",
+          categoryLabel: "Internet",
+          title: "Internet",
+          speedLabel: "75 → 100 Mbps",
+          speedValue: 100,
           price: "Rp250.000",
           priceUnit: "/bulan",
-          promoTag: "PROMO",
-          details: ["Up to 75 Mbps", "Biaya Pasang Rp99.000", "Ideal untuk 7 perangkat"],
-          bonus: null,
-          ctaLabel: "Pilih Paket 75 Mbps"
+          ctaLabel: "Lihat Paket 75 → 100 Mbps",
+          description: "Cocok untuk rumah dengan beberapa perangkat"
         },
         {
-          id: "io-150mbps",
-          title: "Paket Internet Only (150 Mbps)",
+          id: "all-internet-100-150",
+          categoryId: "internet",
+          categoryLabel: "Internet",
+          title: "Internet",
+          speedLabel: "100 → 150 Mbps",
+          speedValue: 150,
+          price: "Rp290.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 100 → 150 Mbps",
+          description: "Kecepatan lebih nyaman untuk keluarga"
+        },
+        {
+          id: "all-internet-150-200",
+          categoryId: "internet",
+          categoryLabel: "Internet",
+          title: "Internet",
+          speedLabel: "150 → 200 Mbps",
+          speedValue: 200,
           price: "Rp325.000",
           priceUnit: "/bulan",
-          promoTag: null,
-          details: ["Up to 150 Mbps", "Biaya Pasang Rp99.000", "Ideal untuk 15 perangkat"],
-          bonus: null,
-          ctaLabel: "Pilih Paket 150 Mbps"
+          ctaLabel: "Lihat Paket 150 → 200 Mbps",
+          description: "Ideal untuk kebutuhan streaming dan work from home"
         },
         {
-          id: "io-200mbps",
-          title: "Paket Internet Only (200 Mbps)",
+          id: "all-internet-200-300",
+          categoryId: "internet",
+          categoryLabel: "Internet",
+          title: "Internet",
+          speedLabel: "200 → 300 Mbps",
+          speedValue: 300,
           price: "Rp490.000",
           priceUnit: "/bulan",
-          promoTag: null,
-          details: ["Up to 200 Mbps", "Biaya Pasang Rp99.000", "Ideal untuk 20 perangkat"],
-          bonus: null,
-          ctaLabel: "Pilih Paket 200 Mbps"
+          ctaLabel: "Lihat Paket 200 → 300 Mbps",
+          description: "Pilihan premium untuk rumah besar"
+        },
+        {
+          id: "all-game-50-75",
+          categoryId: "internet-game",
+          categoryLabel: "Internet + Game",
+          title: "Internet + Game",
+          speedLabel: "50 → 75 Mbps",
+          speedValue: 75,
+          price: "Rp290.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 50 → 75 Mbps",
+          description: "Lebih stabil untuk bermain game online"
+        },
+        {
+          id: "all-game-75-100",
+          categoryId: "internet-game",
+          categoryLabel: "Internet + Game",
+          title: "Internet + Game",
+          speedLabel: "75 → 100 Mbps",
+          speedValue: 100,
+          price: "Rp310.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 75 → 100 Mbps",
+          description: "Nyaman untuk multiplayer dan streaming"
+        },
+        {
+          id: "all-game-100-150",
+          categoryId: "internet-game",
+          categoryLabel: "Internet + Game",
+          title: "Internet + Game",
+          speedLabel: "100 → 150 Mbps",
+          speedValue: 150,
+          price: "Rp350.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 100 → 150 Mbps",
+          description: "Pas bagi rumah yang aktif online"
+        },
+        {
+          id: "all-game-150-200",
+          categoryId: "internet-game",
+          categoryLabel: "Internet + Game",
+          title: "Internet + Game",
+          speedLabel: "150 → 200 Mbps",
+          speedValue: 200,
+          price: "Rp385.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 150 → 200 Mbps",
+          description: "Menunjang banyak perangkat dan game"
+        },
+        {
+          id: "all-game-200-300",
+          categoryId: "internet-game",
+          categoryLabel: "Internet + Game",
+          title: "Internet + Game",
+          speedLabel: "200 → 300 Mbps",
+          speedValue: 300,
+          price: "Rp550.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 200 → 300 Mbps",
+          description: "Pilihan premium untuk pengalaman gaming"
+        },
+        {
+          id: "all-maxstream-50-75",
+          categoryId: "internet-maxstream",
+          categoryLabel: "Internet + MAXstream TV",
+          title: "Internet + MAXstream TV",
+          speedLabel: "50 → 75 Mbps",
+          speedValue: 75,
+          price: "Rp345.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 50 → 75 Mbps",
+          description: "Paket hiburan rumah dengan TV digital"
+        },
+        {
+          id: "all-maxstream-75-100",
+          categoryId: "internet-maxstream",
+          categoryLabel: "Internet + MAXstream TV",
+          title: "Internet + MAXstream TV",
+          speedLabel: "75 → 100 Mbps",
+          speedValue: 100,
+          price: "Rp365.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 75 → 100 Mbps",
+          description: "Cocok untuk keluarga yang suka menonton"
+        },
+        {
+          id: "all-maxstream-100-150",
+          categoryId: "internet-maxstream",
+          categoryLabel: "Internet + MAXstream TV",
+          title: "Internet + MAXstream TV",
+          speedLabel: "100 → 150 Mbps",
+          speedValue: 150,
+          price: "Rp405.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 100 → 150 Mbps",
+          description: "Kualitas streaming lebih lancar"
+        },
+        {
+          id: "all-maxstream-150-200",
+          categoryId: "internet-maxstream",
+          categoryLabel: "Internet + MAXstream TV",
+          title: "Internet + MAXstream TV",
+          speedLabel: "150 → 200 Mbps",
+          speedValue: 200,
+          price: "Rp460.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 150 → 200 Mbps",
+          description: "Paket rumah dengan banyak aktivitas"
+        },
+        {
+          id: "all-maxstream-200-300",
+          categoryId: "internet-maxstream",
+          categoryLabel: "Internet + MAXstream TV",
+          title: "Internet + MAXstream TV",
+          speedLabel: "200 → 300 Mbps",
+          speedValue: 300,
+          price: "Rp625.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 200 → 300 Mbps",
+          description: "Untuk rumah besar dan banyak pengguna"
+        },
+        {
+          id: "all-movie-50-75",
+          categoryId: "internet-movie",
+          categoryLabel: "Internet + Movie Complete",
+          title: "Internet + Movie Complete",
+          speedLabel: "50 → 75 Mbps",
+          speedValue: 75,
+          price: "Rp349.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 50 → 75 Mbps",
+          description: "Paket lengkap untuk hiburan rumah"
+        },
+        {
+          id: "all-movie-75-100",
+          categoryId: "internet-movie",
+          categoryLabel: "Internet + Movie Complete",
+          title: "Internet + Movie Complete",
+          speedLabel: "75 → 100 Mbps",
+          speedValue: 100,
+          price: "Rp369.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 75 → 100 Mbps",
+          description: "Cocok untuk menonton dan browsing"
+        },
+        {
+          id: "all-movie-100-150",
+          categoryId: "internet-movie",
+          categoryLabel: "Internet + Movie Complete",
+          title: "Internet + Movie Complete",
+          speedLabel: "100 → 150 Mbps",
+          speedValue: 150,
+          price: "Rp409.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 100 → 150 Mbps",
+          description: "Ideal untuk streaming sekaligus browsing"
+        },
+        {
+          id: "all-movie-150-200",
+          categoryId: "internet-movie",
+          categoryLabel: "Internet + Movie Complete",
+          title: "Internet + Movie Complete",
+          speedLabel: "150 → 200 Mbps",
+          speedValue: 200,
+          price: "Rp439.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 150 → 200 Mbps",
+          description: "Paket nyaman untuk aktivitas rumah"
+        },
+        {
+          id: "all-movie-200-300",
+          categoryId: "internet-movie",
+          categoryLabel: "Internet + Movie Complete",
+          title: "Internet + Movie Complete",
+          speedLabel: "200 → 300 Mbps",
+          speedValue: 300,
+          price: "Rp609.000",
+          priceUnit: "/bulan",
+          ctaLabel: "Lihat Paket 200 → 300 Mbps",
+          description: "Pilihan premium untuk keluarga besar"
         }
       ]
     },
     {
-      id: "indihome-dynamic",
-      label: "IndiHome Dynamic",
-      subtitle:
-        "Internet WiFi super cepat untuk rumah + dapet Ekstra Kuota HP Telkomsel untuk seluruh anggota keluarga!",
+      id: "internet",
+      label: "Internet",
+      subtitle: "Paket internet rumah dengan kecepatan stabil untuk kebutuhan harian.",
       packages: [
-        {
-          id: "dyn-50-15",
-          title: "IndiHome Dynamic (50 Mbps - 15GB)",
-          price: "Rp270.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 50 Mbps"],
-          bonus: "Kuota Keluarga 15 GB",
-          ctaLabel: "Pilih Paket 50 Mbps (15GB)"
-        },
-        {
-          id: "dyn-50-30",
-          title: "IndiHome Dynamic (50 Mbps - 30GB)",
-          price: "Rp295.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 50 Mbps"],
-          bonus: "Kuota Keluarga 30 GB",
-          ctaLabel: "Pilih Paket 50 Mbps (30GB)"
-        },
-        {
-          id: "dyn-75-15",
-          title: "IndiHome Dynamic (75 Mbps - 15GB)",
-          price: "Rp285.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 75 Mbps"],
-          bonus: "Kuota Keluarga 15 GB",
-          ctaLabel: "Pilih Paket 75 Mbps (15GB)"
-        },
-        {
-          id: "dyn-75-30",
-          title: "IndiHome Dynamic (75 Mbps - 30GB)",
-          price: "Rp310.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 75 Mbps"],
-          bonus: "Kuota Keluarga 30 GB",
-          ctaLabel: "Pilih Paket 75 Mbps (30GB)"
-        },
-        {
-          id: "dyn-100-15",
-          title: "IndiHome Dynamic (100 Mbps - 15GB)",
-          price: "Rp325.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 100 Mbps"],
-          bonus: "Kuota Keluarga 15 GB",
-          ctaLabel: "Pilih Paket 100 Mbps (15GB)"
-        },
-        {
-          id: "dyn-100-30",
-          title: "IndiHome Dynamic (100 Mbps - 30GB)",
-          price: "Rp350.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 100 Mbps"],
-          bonus: "Kuota Keluarga 30 GB",
-          ctaLabel: "Pilih Paket 100 Mbps (30GB)"
-        },
-        {
-          id: "dyn-150-15",
-          title: "IndiHome Dynamic (150 Mbps - 15GB)",
-          price: "Rp355.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 150 Mbps"],
-          bonus: "Kuota Keluarga 15 GB",
-          ctaLabel: "Pilih Paket 150 Mbps (15GB)"
-        },
-        {
-          id: "dyn-150-30",
-          title: "IndiHome Dynamic (150 Mbps - 30GB)",
-          price: "Rp380.000",
-          priceUnit: "/bulan",
-          installFee: "Rp99.000",
-          promoTag: null,
-          details: ["Up to 150 Mbps"],
-          bonus: "Kuota Keluarga 30 GB",
-          ctaLabel: "Pilih Paket 150 Mbps (30GB)"
-        }
+        { id: "internet-50-75", title: "Internet", speedLabel: "50 → 75 Mbps", speedValue: 75, price: "Rp230.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 50 → 75 Mbps", description: "Paket internet rumah yang stabil" },
+        { id: "internet-75-100", title: "Internet", speedLabel: "75 → 100 Mbps", speedValue: 100, price: "Rp250.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 75 → 100 Mbps", description: "Cocok untuk rumah dengan beberapa perangkat" },
+        { id: "internet-100-150", title: "Internet", speedLabel: "100 → 150 Mbps", speedValue: 150, price: "Rp290.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 100 → 150 Mbps", description: "Kecepatan lebih nyaman untuk keluarga" },
+        { id: "internet-150-200", title: "Internet", speedLabel: "150 → 200 Mbps", speedValue: 200, price: "Rp325.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 150 → 200 Mbps", description: "Ideal untuk streaming dan work from home" },
+        { id: "internet-200-300", title: "Internet", speedLabel: "200 → 300 Mbps", speedValue: 300, price: "Rp490.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 200 → 300 Mbps", description: "Pilihan premium untuk rumah besar" }
+      ]
+    },
+    {
+      id: "internet-game",
+      label: "Internet + Game",
+      subtitle: "Paket yang tetap lancar untuk aktivitas online, streaming, dan gaming.",
+      packages: [
+        { id: "game-50-75", title: "Internet + Game", speedLabel: "50 → 75 Mbps", speedValue: 75, price: "Rp290.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 50 → 75 Mbps", description: "Lebih stabil untuk bermain game online" },
+        { id: "game-75-100", title: "Internet + Game", speedLabel: "75 → 100 Mbps", speedValue: 100, price: "Rp310.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 75 → 100 Mbps", description: "Nyaman untuk multiplayer dan streaming" },
+        { id: "game-100-150", title: "Internet + Game", speedLabel: "100 → 150 Mbps", speedValue: 150, price: "Rp350.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 100 → 150 Mbps", description: "Pas bagi rumah yang aktif online" },
+        { id: "game-150-200", title: "Internet + Game", speedLabel: "150 → 200 Mbps", speedValue: 200, price: "Rp385.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 150 → 200 Mbps", description: "Menunjang banyak perangkat dan game" },
+        { id: "game-200-300", title: "Internet + Game", speedLabel: "200 → 300 Mbps", speedValue: 300, price: "Rp550.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 200 → 300 Mbps", description: "Pilihan premium untuk pengalaman gaming" }
+      ]
+    },
+    {
+      id: "internet-maxstream",
+      label: "Internet + MAXstream TV",
+      subtitle: "Paket lengkap untuk kebutuhan internet rumah plus hiburan TV.",
+      packages: [
+        { id: "maxstream-50-75", title: "Internet + MAXstream TV", speedLabel: "50 → 75 Mbps", speedValue: 75, price: "Rp345.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 50 → 75 Mbps", description: "Paket hiburan rumah dengan TV digital" },
+        { id: "maxstream-75-100", title: "Internet + MAXstream TV", speedLabel: "75 → 100 Mbps", speedValue: 100, price: "Rp365.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 75 → 100 Mbps", description: "Cocok untuk keluarga yang suka menonton" },
+        { id: "maxstream-100-150", title: "Internet + MAXstream TV", speedLabel: "100 → 150 Mbps", speedValue: 150, price: "Rp405.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 100 → 150 Mbps", description: "Kualitas streaming lebih lancar" },
+        { id: "maxstream-150-200", title: "Internet + MAXstream TV", speedLabel: "150 → 200 Mbps", speedValue: 200, price: "Rp460.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 150 → 200 Mbps", description: "Paket rumah dengan banyak aktivitas" },
+        { id: "maxstream-200-300", title: "Internet + MAXstream TV", speedLabel: "200 → 300 Mbps", speedValue: 300, price: "Rp625.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 200 → 300 Mbps", description: "Untuk rumah besar dan banyak pengguna" }
+      ]
+    },
+    {
+      id: "internet-movie",
+      label: "Internet + Movie",
+      subtitle: "Paket lengkap untuk internet rumah dan hiburan film keluarga.",
+      packages: [
+        { id: "movie-50-75", title: "Internet + Movie Complete", speedLabel: "50 → 75 Mbps", speedValue: 75, price: "Rp349.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 50 → 75 Mbps", description: "Paket lengkap untuk hiburan rumah" },
+        { id: "movie-75-100", title: "Internet + Movie Complete", speedLabel: "75 → 100 Mbps", speedValue: 100, price: "Rp369.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 75 → 100 Mbps", description: "Cocok untuk menonton dan browsing" },
+        { id: "movie-100-150", title: "Internet + Movie Complete", speedLabel: "100 → 150 Mbps", speedValue: 150, price: "Rp409.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 100 → 150 Mbps", description: "Ideal untuk streaming sekaligus browsing" },
+        { id: "movie-150-200", title: "Internet + Movie Complete", speedLabel: "150 → 200 Mbps", speedValue: 200, price: "Rp439.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 150 → 200 Mbps", description: "Paket nyaman untuk aktivitas rumah" },
+        { id: "movie-200-300", title: "Internet + Movie Complete", speedLabel: "200 → 300 Mbps", speedValue: 300, price: "Rp609.000", priceUnit: "/bulan", ctaLabel: "Lihat Paket 200 → 300 Mbps", description: "Pilihan premium untuk keluarga besar" }
       ]
     }
   ]
@@ -166,11 +307,17 @@ const speedSelect = document.getElementById("speed-select");
 const mobileBottomBar = document.getElementById("mobile-bottom-bar");
 const heroSection = document.getElementById("hero");
 
-let activeCategory = "internet-only";
+let activeCategory = "all-packages";
 let selectedPackageId = null;
+
+function parsePrice(value) {
+  return Number(String(value).replace(/\D/g, ""));
+}
 
 function renderCategory(categoryId) {
   const category = catalog.categories.find((item) => item.id === categoryId);
+  if (!category) return;
+
   activeCategory = categoryId;
   tabSubtitle.textContent = category.subtitle;
 
@@ -182,28 +329,27 @@ function renderCategory(categoryId) {
 
   pricingGrid.innerHTML = category.packages
     .map((pkg) => {
-      const isPromo = Boolean(pkg.promoTag);
       const isSelected = selectedPackageId === pkg.id;
-      const isDynamicCategory = categoryId === "indihome-dynamic";
-      const headerMarkup = isDynamicCategory
-        ? `<div class="pricing-card__header">📶 <span>${pkg.bonus}</span></div>`
-        : "";
+      const headerMarkup = "";
       const detailMarkup = [
-        ...(pkg.details || []).map((detail) => `<li>${detail}</li>`),
-        ...(pkg.installFee ? [`<li>${pkg.installFee}</li>`] : [])
-      ]
-        .map((item) => item)
-        .join("");
+        `<li>${pkg.speedLabel}</li>`,
+        `<li>Biaya pasang Rp99.000</li>`,
+        `<li>${pkg.description || "Harga sesuai area pasang"}</li>`
+      ].join("");
+      // create a WhatsApp link that pre-fills a message with package info
+      const waHref =
+        "https://wa.me/6281234567890?text=" +
+        encodeURIComponent(`Halo, saya mau pesan paket ${pkg.title} ${pkg.speedLabel}`);
 
       return `
-        <article class="pricing-card ${isPromo ? "pricing-card--promo" : ""} ${isSelected ? "selected" : ""}" data-package-id="${pkg.id}">
+        <article class="pricing-card ${isSelected ? "selected" : ""}" data-package-id="${pkg.id}">
           ${headerMarkup}
           <div class="pricing-card__body">
             <h3 class="pricing-card__title">${pkg.title}</h3>
             <p class="pricing-card__price">${pkg.price}<span>${pkg.priceUnit}</span></p>
             <ul class="pricing-card__details">${detailMarkup}</ul>
             <div class="pricing-card__footer">
-              <button class="pricing-card__cta" type="button">${pkg.ctaLabel}</button>
+              <a class="pricing-card__cta" href="${waHref}" target="_blank" rel="noreferrer">${pkg.ctaLabel}</a>
             </div>
           </div>
         </article>
@@ -236,10 +382,22 @@ function highlightPackage(packageId) {
 function renderCalculator() {
   const familyMembers = Number(familySelect.value);
   const speed = Number(speedSelect.value);
-  const dynamicCategory = catalog.categories.find((item) => item.id === "indihome-dynamic");
-  const matches = dynamicCategory.packages.filter((pkg) =>
-    pkg.details.some((detail) => detail.includes(`Up to ${speed} Mbps`))
-  );
+  const requestedLabel = {
+    50: "50 → 75 Mbps",
+    75: "75 → 100 Mbps",
+    100: "100 → 150 Mbps",
+    150: "150 → 200 Mbps",
+    200: "200 → 300 Mbps",
+    300: "200 → 300 Mbps"
+  }[speed];
+
+  const matches = catalog.categories
+    .filter((item) => item.id !== "all-packages")
+    .flatMap((category) =>
+      category.packages
+        .filter((pkg) => pkg.speedLabel === requestedLabel)
+        .map((pkg) => ({ ...pkg, categoryId: category.id, categoryLabel: category.label }))
+    );
 
   output.classList.add("is-loading");
   setTimeout(() => {
@@ -248,45 +406,34 @@ function renderCalculator() {
     if (!matches.length) {
       output.innerHTML = `
         <div class="calculator-empty">
-          Belum ada rekomendasi pas — cek semua paket di bawah ini.
+          Belum ada rekomendasi untuk kecepatan ini — cek semua paket di bawah ini.
         </div>
         <a class="mini-card__button" href="#paket" role="button">Lihat semua paket</a>
       `;
       return;
     }
 
-    const tier15 = matches.find((pkg) => pkg.bonus?.includes("15 GB"));
-    const tier30 = matches.find((pkg) => pkg.bonus?.includes("30 GB"));
-    const recommendation = familyMembers >= 4 ? tier30 || tier15 : tier15 || tier30;
-    const recommendedLabel = familyMembers >= 4 ? "30GB" : "15GB";
+    const sortedMatches = [...matches].sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    const cheapest = sortedMatches[0];
+    const recommendedLabel = familyMembers >= 4 ? "paket premium" : "paket hemat";
 
     output.innerHTML = `
       <div class="recommendation-card">
-        <p class="recommendation-card__text">Untuk ${familyMembers} anggota, disarankan ${recommendedLabel}.</p>
+        <p class="recommendation-card__text">Untuk ${familyMembers} anggota, ${recommendedLabel} untuk ${speed} Mbps adalah ${cheapest.title}.</p>
         <div class="mini-card-grid">
-          ${tier15 ? `
-            <div class="mini-card">
-              <span class="mini-card__badge">15 GB</span>
-              <h4>${tier15.title}</h4>
-              <div class="mini-card__price">${tier15.price}</div>
-              <button class="mini-card__button" data-package-id="${tier15.id}" type="button">Lihat Paket</button>
-            </div>
-          ` : ""}
-          ${tier30 ? `
-            <div class="mini-card">
-              <span class="mini-card__badge">30 GB</span>
-              <h4>${tier30.title}</h4>
-              <div class="mini-card__price">${tier30.price}</div>
-              <button class="mini-card__button" data-package-id="${tier30.id}" type="button">Lihat Paket</button>
-            </div>
-          ` : ""}
+          <div class="mini-card">
+            <span class="mini-card__badge">${cheapest.categoryLabel}</span>
+            <h4>${cheapest.speedLabel}</h4>
+            <div class="mini-card__price">${cheapest.price}</div>
+            <button class="mini-card__button" data-package-id="${cheapest.id}" data-category-id="${cheapest.categoryId}" type="button">Lihat Paket</button>
+          </div>
         </div>
       </div>
     `;
 
     output.querySelectorAll(".mini-card__button").forEach((button) => {
       button.addEventListener("click", () => {
-        renderCategory("indihome-dynamic");
+        renderCategory(button.dataset.categoryId);
         highlightPackage(button.dataset.packageId);
       });
     });
@@ -311,9 +458,7 @@ speedSelect.addEventListener("change", renderCalculator);
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     renderCategory(tab.dataset.category);
-    if (tab.dataset.category === "indihome-dynamic") {
-      renderCalculator();
-    }
+    renderCalculator();
   });
 });
 

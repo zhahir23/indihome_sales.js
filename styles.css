@@ -74,14 +74,38 @@ select:focus-visible {
 }
 
 .brand__mark {
-  display: grid;
-  place-items: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 999px;
-  background: var(--color-brand-red);
-  color: white;
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* When a logo image is provided inside the mark */
+.brand__mark .brand__logo {
+  display: block;
+  width: auto;
+  height: 36px; /* smaller logo height */
+  max-width: 220px;
+  object-fit: contain;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .brand__mark .brand__logo {
+    height: 36px;
+    max-width: 160px;
+  }
+}
+
+.brand__name {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .site-nav {
@@ -331,6 +355,7 @@ main {
 
 .tab-switcher {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.6rem;
   padding: 0.5rem;
   border-radius: 999px;
@@ -397,16 +422,6 @@ main {
   letter-spacing: 0.04em;
   color: white;
   background: linear-gradient(90deg, var(--color-brand-red), #ff4d54);
-}
-
-.pricing-card__header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.95rem 1.05rem;
-  background: var(--color-cyan-soft);
-  color: var(--color-text-primary);
-  font-weight: 700;
 }
 
 .pricing-card__body {
